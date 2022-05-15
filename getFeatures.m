@@ -29,10 +29,13 @@ function featureVec = getFeatures(data)
     % Get Mean Value
     dataMean = mean(data); % the mean value
 
+    % Get Variance Value
+    dataVar = var(data);
+
     % Get RMS Value
     dataRMS = rms(data); % the rms value
 
     % Output a row vector of features
-    featureVec = [dataFftPeak' dataCorrPeak' dataPsdPeak' dataMean dataRMS];
+    featureVec = [dataFftPeak' dataCorrPeak' dataPsdPeak' dataMean dataVar dataRMS];
     
 end
